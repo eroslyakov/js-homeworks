@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var a=parseInt(prompt('Введите любое число в диапазоне [-999, 999]: '));
+            if((a>=-999)&&(a<-99)) {
+                document.write('отрицательное трёхзначное число');
+            } else
+                if((a>=-99)&&(a<-9)) {
+                    document.write('отрицательное двузначное число');
+                } else
+                        if((a<0)&&(a>=-9)) {
+                            document.write('отрицательное однозначное число');
+                        } else
+                            if(a===0) {
+                                document.write('нулевое число');
+                            } else
+                                if((a>0)&&(a<=9)) {
+                                    document.write('положительное однозначное число');
+                                } else
+                                        if((a>9)&&(a<=99)) {
+                                            document.write('положительное двузначное число');
+                                        } else
+                                                if((a>99)&&(a<=999)) {
+                                                    document.write('положительное трёхзначное число');
+                                                } else {
+                                                    document.write('число вне указанного диапазона');
+                                                }
+        </script>
+    </body>
+</html>
