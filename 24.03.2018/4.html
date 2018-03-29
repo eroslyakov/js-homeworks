@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var L=parseFloat(prompt('Введите длину отрезка L:'));
+            var mer=parseInt(prompt('Укажите единицу длины (1-дм, 2-км, 3-м, 4-мм, 5-см):'));
+            var Lm;
+            
+            switch(mer) {
+                case 1: 
+                    Lm=L/10;
+                    alert('L = '+Math.round(Lm*1000)/1000+'м');//Округление дробной части
+                    break;
+                case 2:  
+                    Lm=L*1000;
+                    alert('L = '+Lm+'м');
+                    break;
+                case 3:  
+                    alert('L = '+L+'м');
+                    break;
+                case 4:  
+                    var Lm=L/1000;
+                    alert('L = '+Math.round(Lm*10000)/10000+'м');
+                    break;
+                case 5:  
+                    var Lm=L/100;
+                    alert('L = '+Math.round(Lm*1000)/1000+'м');
+                    break;
+                default: alert('неверное значение');
+            }
+        </script>
+    </body>
+</html>
