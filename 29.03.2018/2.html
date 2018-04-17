@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var aria = [1, null, 0, null, 1, null, 0, 0, null];
+            var symbol = '';
+            var i = 0;
+            var str="<p>Крестики-нолики</p><table><tbody>";
+            
+            for ( var j=0; j<3; j++) {
+                str+='<tr>';
+                aria.length = 3 + j*3;
+                i = 0 + 3*j;
+                for (i; i<aria.length; i++) {
+                    if(aria[i]===1) {
+                        symbol='X';
+                    } else if(aria[i]===0) {
+                        symbol='O';
+                    } else {
+                        symbol='';
+                    }
+                        str=str+'<td style="border:2px solid black;width:40px;height:40px;text-align:center;">'+symbol+'</td>';
+                    }
+                str+='</tr>';
+                aria.length = 0;
+                aria = aria.concat([1, null, 0, null, 1, null, 0, 0, null]);
+            }
+            str+='</tbody></table>';
+            document.write(str);
+      
+        </script>
+    </body>
+</html>

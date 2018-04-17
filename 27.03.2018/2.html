@@ -5,15 +5,15 @@
     <body>
         <script>
             var str=prompt('Введите строку:');
-            var let=prompt('Какую букву из входящих в строку удвоить?');
+            var letter=prompt('Какую букву из входящих в строку удвоить?');
             var pos=0;
             
-            if (str.indexOf(let)===-1) alert('Такой буквы в строке нет!');
+            if (str.indexOf(letter)===-1) alert('Такой буквы в строке нет!');
             
             for (var i=0; i<str.length; i++) {
                 pos=str.charAt(i);
-                if (let===pos) {
-                    str=str.substring(0,i+1)+let+str.substring(i+1);
+                if (letter===pos) {
+                    str=str.substring(0,i+1)+letter+str.substring(i+1);
                     i++;
                 }
             }

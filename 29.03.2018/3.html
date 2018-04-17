@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            var arr = [12, 4, 3, 10, 1, 20];
+            var min = arr[0];
+            var max = arr[0];
+            var pos = 0;
+            
+            for(var i=1; i<arr.length; i++) {
+                if(min>arr[i]) {
+                    min = arr[i];
+                    pos = i;
+                }
+            }            
+            arr.splice(pos, 1);
+            
+            for(var i=1; i<arr.length; i++) {
+                if(max<arr[i]) {
+                    max = arr[i];
+                    pos = i;
+                }
+            }            
+            arr.splice(pos, 1);
+            
+            console.log(arr);
+             
+        </script>
+    </body>
+</html>
